@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Dosis:wght@200;300;400;700;800&family=Lato:wght@100;300;400;900&family=Poppins:wght@300;500;900&family=Quicksand:wght@300;400;500;700&family=Red+Hat+Display:wght@300;400;500;800&family=Space+Mono:wght@400;700&display=swap');
+* {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+body{
+    background-color: #ff9d00;
+background-attachment: fixed;
+background-size: cover;
+}
+.background{
+    background-color: #1A2B33;
+}
+.font {
+  font-size: 12px;
+}
+.poppin{
+  font-family: Poppins,serif;
+  font-weight: 900;
+}
+.quick {
+  font-family: Quicksand,serif;
+  font-weight: 700;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  width: 100%;
+  justify-content:space-around;
+  align-content:space-around;
+}
+.header {
+  box-sizing: border-box;
+  box-shadow: 0 1px 4px 0px black;
+}
+.header a {
+  color: rgb(242, 242, 242);
+  display: inline;
+  text-decoration: none;
+  margin-top: 2%;
+  cursor: pointer;
+  font-family: Quicksand,serif;
+  font-weight: 700;
+}
+a:focus,
+a:hover,
+a:visited {
+  background: transparent!important;
+  text-decoration: none !important;
+  color:rgb(242, 242, 242);
+}
+.navbar {
+  margin-top: 0;
+  padding: 0 5% 0 5%;
+  margin: 0;
+  height: 10%;
+}
+.borderline {
+  border-radius: 5px;
+  border: 2px solid lightgrey;
+  width: 100%;
+  padding: 5%;
+  height: auto;
+  margin-top: 3%;
+  background-color: #fff;
+  box-shadow: 0 1px 4px 0px black;
+}
+.dotClass{
+  color:white;
+}
+.link {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #001a00;
+  width: auto;
+  font-size: 15px;
+  cursor: pointer;
+  float: right;
+  font-family: 'Red Hat Display', sans-serif;
+  width: 100%;
+  display: block;
+  margin: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(242, 242, 242);
+  background-color: #41323b;
+}
+.hlink{
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 15px;
+    padding: 2px 10px;
+}
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  margin-bottom: none;
+  box-sizing: border-box;
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+}
+.footer a{
+    background: transparent!important;
+    text-decoration: none !important;
+    color:rgb(242, 242, 242);
+}
+.grid a {
+  color: rgb(242, 242, 242);
+  padding: 2px;
+  display: inline;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Quicksand,serif;
+  font-weight: 500;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.gridRoom{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 3px;
+}
+.footer .grid li,ul {
+  list-style-type: none;
+  margin-top: 3%;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.block{
+    display:block;
+}
+.red{
+    color: red;
+}
+.green {
+  color: green;
+}
+.grey {
+  color: grey;
+}
+/* TABLE */
+table {
+  border-collapse: collapse;
+  font-size: 12px;
+  width: 100%;
+}
+th,td {
+  padding: 3px;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+th {
+  font-weight: bolder;
+  background-color: #41323b;
+  color: rgb(241, 241, 241);
+  padding: 2px;
+  font-size: 10px;
+}
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.inline{
+    display: inline;
+}
+/* HOTEL GRID DISPLAY */
+.img {
+  width: 100%;
+  height: 200px;
+  object-fit:cover;
+  box-shadow: 0 1px 4px 0px black;
+  border-radius: 0 0 5px 5px;
+}
+.imgRoom{
+  width: 100%;
+  height: 8.8rem;
+  object-fit:cover;
+  box-shadow: 0 1px 2.5px 0px black;
+  border-radius: 5px 5px;
+}
+
+.imgheader {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.5rem;
+  border-radius: 1.5rem;
+  object-fit:cover;
+  
+}
+.imglogo {
+  width: 2rem;
+  margin-right: 1rem;
+}
+.card{
+    width: 20rem;
+    margin-top: 1.5%;
+}
+.item{
+    display:flex;
+    align-items: center;
+    align-content:center;
+}
+@media only screen and (min-width: 768px){
+    .container{
+        padding: 1.5%;
+    }
+    .card{
+        width:20rem;
+    }
+}
+.fullscreen{
+  background:#181818;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  display: flex;
+  align-content:center;
+  align-items:center;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+

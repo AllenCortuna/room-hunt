@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  widows: 100vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  background-color: #EFEFEF;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  display: flex;
+}
+
+.nav-btn span {
+  width: 30px;
+  height: 5px;
+  background: #fff;
+  display: flex;
+  position: absolute;
+  transition: 0.3s;
+  border-radius: 2.5px;
+  box-shadow: 0 0.5px 2px 0px black;
+}
+
+.nav-btn span:nth-child(1) {
+  top: 20%;
+}
+
+.nav-btn span:nth-child(2) {
+  top: 80%;
+}
+
+.nav-btn.is-active span {
+  background: #fff;
+}
+
+.nav-btn.is-active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.nav-btn.is-active span:nth-child(2) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000;
+  padding: 100px;
+  z-index: 2;
+  transition: 0.3s;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav-menu.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  font-weight: bold;
+  font-size: 35px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: -5px;
+  height: 40px;
+  display: inline-flex;
+  background: lightgreen;
+  width: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.nav-link:hover:after {
+  width: 110%;
+  border-radius: 0 5px 5px 0;
+}
+
+.header {
+  padding: 0;
+  margin-bottom: -1rem;
+  widows: 100vw;
+  height: 30vh;
+}
+.header img {
+  z-index: -1;
+  width: 100vw;
+  height: auto;
+}
+
+.content {
+  background: whitesmoke;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 100%;
+  position: relative;
+  margin-top: -1rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.content .logo {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3rem;
+  background: whitesmoke;
+  position: absolute;
+  margin-top: -4rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: auto;
+  padding: 0.5rem;
+}
+.content .logo img {
+  width: 5rem;
+}
+.content .feature {
+  width: 21rem;
+  background-color: #ffffff;
+  height: auto;
+  padding: 15px 10px;
+  border-radius: 10px;
+  margin-top: 3rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.content .feature img {
+  width: 20rem;
+}
+.content .feature p {
+  font-size: 1rem;
+  color: grey;
+}
+
+/*# sourceMappingURL=index.css.map */

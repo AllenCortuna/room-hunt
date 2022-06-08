@@ -1,0 +1,47 @@
+
+
+@use "../layout/layout"
+@use "../typograpy/typograpy"
+.header
+  padding: 0
+  margin-bottom: -1rem
+  widows: 100vw
+  height: 30vh
+
+  img
+    z-index: -1
+    width: 100vw
+    height: auto
+  
+.content
+  background: whitesmoke
+  padding: 1em
+  @include layout.container
+  position: relative
+  margin-top: -1rem
+  border-radius: 1rem 1rem 0 0
+
+  .logo
+    width: 6rem
+    height: 6rem
+    border-radius: 3rem
+    background: whitesmoke
+    position: absolute
+    margin-top: -4rem
+    @include layout.center
+    padding: .5rem
+    img
+      width:5rem
+    
+        //FEATURE
+  .feature
+    @include layout.paper
+    @include layout.shadow
+    // padding: 1rem
+    
+    img
+      width: 20rem
+
+    p 
+      @include typograpy.grey
+    
