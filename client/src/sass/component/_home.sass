@@ -2,6 +2,7 @@
 
 @use "../layout/layout"
 @use "../typograpy/typograpy"
+@use "../base/base"
 .header
   padding: 0
   margin-bottom: -1rem
@@ -15,7 +16,7 @@
   
 .content
   background: whitesmoke
-  padding: 1em
+  padding: 1em 1rem 5rem 1rem
   @include layout.container
   position: relative
   margin-top: -1rem
@@ -26,9 +27,7 @@
     height: 6rem
     border-radius: 3rem
     background: whitesmoke
-    position: absolute
-    margin-top: -4rem
-    @include layout.center
+    margin-bottom: -20rem
     padding: .5rem
     img
       width:5rem
@@ -38,10 +37,24 @@
     @include layout.paper
     @include layout.shadow
     // padding: 1rem
-    
     img
-      width: 20rem
+      width: inherit
+      max-height: max-content
+      margin-left: -0.64rem
+      margin-bottom: -1.4rem
+      border-radius: 0 0 .5rem .5rem
 
     p 
       @include typograpy.grey
-    
+    h3 
+      font-weight: 600
+      color: base.$lightdark
+
+.feature:nth-child(1) img
+    margin-top: -6rem
+
+
+
+
+
+

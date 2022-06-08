@@ -132,7 +132,7 @@ body {
 
 .content {
   background: whitesmoke;
-  padding: 1em;
+  padding: 1em 1rem 5rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -147,12 +147,7 @@ body {
   height: 6rem;
   border-radius: 3rem;
   background: whitesmoke;
-  position: absolute;
-  margin-top: -4rem;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  padding: auto;
+  margin-bottom: -20rem;
   padding: 0.5rem;
 }
 .content .logo img {
@@ -168,11 +163,23 @@ body {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .content .feature img {
-  width: 20rem;
+  width: inherit;
+  max-height: max-content;
+  margin-left: -0.64rem;
+  margin-bottom: -1.4rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 .content .feature p {
   font-size: 1rem;
   color: grey;
+}
+.content .feature h3 {
+  font-weight: 600;
+  color: #2C475F;
+}
+
+.feature:nth-child(1) img {
+  margin-top: -6rem;
 }
 
 /*# sourceMappingURL=index.css.map */
