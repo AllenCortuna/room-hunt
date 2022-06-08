@@ -16,20 +16,24 @@
   
 .content
   background: whitesmoke
-  padding: 1em 1rem 0 1rem
+  padding: 1em 1rem 5rem 1rem
   @include layout.container
   position: relative
-  margin-top: -1rem
-  border-radius: 1rem 1rem 0 0
+  margin: -1rem 0 -1rem 0
 
+  border-radius: 1rem 
+
+    // LOGO
   .logo
     width: 6rem
     height: 6rem
     border-radius: 3rem
     background: whitesmoke
     margin-bottom: -3rem
-    margin-top: 4rem
+    // margin-top: 4rem
     padding: .5rem
+    position: absolute
+    bottom: 0
     img
       width:5rem
     
@@ -37,6 +41,7 @@
   .feature
     @include layout.paper
     @include layout.shadow
+    position: relative
     // padding: 1rem
     img
       width: inherit
@@ -52,8 +57,23 @@
       color: base.$lightdark
 
 .feature:nth-child(1) img
-    margin-top: -6rem
+  // margin-top: -6rem
+  position: absolute
+  bottom: 0
+  left: 0
+  width: inherit
 
+.get-started
+  background: base.$lightdark
+  padding: 5rem 2rem
+  font-size: 1rem
+  @include layout.center
+
+  h5
+    @include typograpy.font(1.5rem,500,#fff)
+    
+
+    
 
 
 

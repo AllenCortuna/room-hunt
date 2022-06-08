@@ -132,15 +132,15 @@ body {
 
 .content {
   background: whitesmoke;
-  padding: 1em 1rem 0 1rem;
+  padding: 1em 1rem 5rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
   width: 100%;
   position: relative;
-  margin-top: -1rem;
-  border-radius: 1rem 1rem 0 0;
+  margin: -1rem 0 -1rem 0;
+  border-radius: 1rem;
 }
 .content .logo {
   width: 6rem;
@@ -148,8 +148,9 @@ body {
   border-radius: 3rem;
   background: whitesmoke;
   margin-bottom: -3rem;
-  margin-top: 4rem;
   padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
 }
 .content .logo img {
   width: 5rem;
@@ -162,6 +163,7 @@ body {
   border-radius: 10px;
   margin-top: 3rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: relative;
 }
 .content .feature img {
   width: inherit;
@@ -180,7 +182,24 @@ body {
 }
 
 .feature:nth-child(1) img {
-  margin-top: -6rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+}
+
+.get-started {
+  background: #2C475F;
+  padding: 5rem 2rem;
+  font-size: 1rem;
+  margin: auto;
+  text-align: center;
+}
+.get-started h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */

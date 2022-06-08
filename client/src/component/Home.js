@@ -41,7 +41,7 @@ const Home = () => {
           </p>
           <img src={window} alt="" srcset="" className="offset-bot" />
         </div>
-
+<br/>
         <div className="logo">
           <img src={logoIcon} alt=""/>
         </div>
