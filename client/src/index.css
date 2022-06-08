@@ -132,7 +132,7 @@ body {
 
 .content {
   background: whitesmoke;
-  padding: 1em 1rem 5rem 1rem;
+  padding: 1em 1rem 0 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -147,7 +147,8 @@ body {
   height: 6rem;
   border-radius: 3rem;
   background: whitesmoke;
-  margin-bottom: -20rem;
+  margin-bottom: -3rem;
+  margin-top: 4rem;
   padding: 0.5rem;
 }
 .content .logo img {
