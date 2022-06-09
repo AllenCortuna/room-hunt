@@ -6,7 +6,6 @@ import window from "./img/window.png";
 import logoIcon from "./img/logoicon.png";
 import couch from "./img/couch.png"
 import furniture from "./img/furniture.png"
-import {Chip} from '@mui/material';
 // <img src={logo} alt="" />
 
 const Home = () => {
@@ -51,7 +50,9 @@ const Home = () => {
       <div className="get-started">
         <h5>See Available Rooms now!</h5>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nobis molestias eveniet. Placeat nulla voluptatum, cupiditate corporis veniam fuga minus ullam sequi dicta natus, mollitia totam repudiandae optio necessitatibus doloribus.</p>
-
+      <button className="btn-white">
+        GET STARTED
+      </button>
       </div>
 
     </div>

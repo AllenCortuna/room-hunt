@@ -9,14 +9,16 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess=aoO
-badd +9 component/Home.js
-badd +5 sass/index.sass
-badd +92 sass/component/_navbar.sass
+badd +52 component/Home.js
+badd +6 sass/index.sass
+badd +67 sass/component/_navbar.sass
+badd +7 ~/room-hunt/client/src/sass/vendor/chip.sass
+badd +12 ~/room-hunt/client/src/theme.js
 argglobal
 %argdel
-edit component/Home.js
+edit sass/index.sass
 argglobal
-balt sass/component/_navbar.sass
+balt ~/room-hunt/client/src/sass/vendor/chip.sass
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -27,12 +29,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 60 - ((7 * winheight(0) + 16) / 32)
+let s:l = 6 - ((5 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 60
-normal! 074|
+keepjumps 6
+normal! 020|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

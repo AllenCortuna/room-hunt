@@ -1,0 +1,21 @@
+@use "../base/base"
+@mixin hover($color:#000, $bcolor: #fff,)
+  background: $bcolor
+  color: $color
+  transition: .4s
+  border: 2px solid $bcolor
+
+  
+
+
+.btn-white
+  background: none
+  padding: .2rem .4rem
+  border: 2px solid #fff
+  color: whitesmoke
+  font-weight: 500
+  font-size: 1.3rem
+  border-radius: 3rem
+
+.btn-white:hover
+  @include hover(whitesmoke,base.$warning)  
