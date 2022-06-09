@@ -9,14 +9,14 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess=aoO
-badd +1 component/Button.js
-badd +1 sass/component/_button.sass
-badd +63 sass/component/_home.sass
+badd +9 component/Home.js
+badd +5 sass/index.sass
+badd +92 sass/component/_navbar.sass
 argglobal
 %argdel
-edit sass/component/_home.sass
+edit component/Home.js
 argglobal
-balt sass/component/_button.sass
+balt sass/component/_navbar.sass
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -27,12 +27,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 61 - ((24 * winheight(0) + 16) / 32)
+let s:l = 60 - ((7 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 61
-normal! 0
+keepjumps 60
+normal! 074|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

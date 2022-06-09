@@ -6,7 +6,7 @@ import window from "./img/window.png";
 import logoIcon from "./img/logoicon.png";
 import couch from "./img/couch.png"
 import furniture from "./img/furniture.png"
-import Button from "./Button"
+import Button from '@mui/material/Button';
 // <img src={logo} alt="" />
 
 const Home = () => {
@@ -39,9 +39,14 @@ const Home = () => {
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero est soluta pariatur sequi doloremque illo provident, exercitationem
           </p>
-          <img src={window} alt="" srcset="" className="offset-bot" />
+          <img src={window} alt=""  />
         </div>
-<br/>
+
+        <div className="feature">
+          <h3>See Details</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo laboriosam, maxime, provident modi qui dolore. Ipsum quasi, totam quas explicabo consectetur quo laborum nam!</p>
+          <img src={furniture} alt=""/>
+        </div>
         <div className="logo">
           <img src={logoIcon} alt=""/>
         </div>
@@ -50,9 +55,9 @@ const Home = () => {
 
       {/*GET STARTED */}
       <div className="get-started">
-        <h5>start exploring now</h5>
-        <Button text={"Get Started"} />
-
+        <h5>See Available Rooms now!</h5>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nobis molestias eveniet. Placeat nulla voluptatum, cupiditate corporis veniam fuga minus ullam sequi dicta natus, mollitia totam repudiandae optio necessitatibus doloribus.</p>
+        <Button variant="outlined" color="primary" size="large" gutter-top>GET STARTED</Button>
 
       </div>
 

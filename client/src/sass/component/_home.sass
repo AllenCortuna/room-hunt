@@ -42,35 +42,37 @@
     @include layout.paper
     @include layout.shadow
     position: relative
+    width: 20rem
     // padding: 1rem
     img
-      width: inherit
+      width: 20rem
       max-height: max-content
-      margin-left: -0.64rem
-      margin-bottom: -1.4rem
+      // margin-left: -0.64rem
+      // margin-bottom: -1.4rem
       border-radius: 0 0 .5rem .5rem
-
+      position: absolute
+      bottom: 0
+      left: 0
     p 
       @include typograpy.grey
+      margin-bottom: 10rem
     h3 
       font-weight: 600
       color: base.$lightdark
 
-.feature:nth-child(1) img
-  // margin-top: -6rem
-  position: absolute
-  bottom: 0
-  left: 0
-  width: inherit
 
 .get-started
-  background: base.$lightdark
+  background: base.$dark
   padding: 5rem 2rem
   font-size: 1rem
   @include layout.center
-
   h5
-    @include typograpy.font(1.5rem,500,#fff)
+    @include typograpy.font(1.1rem,500,whitesmoke)
+  p
+    color: grey
+    margin-bottom: 3rem
+
+
     
 
     

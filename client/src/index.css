@@ -156,7 +156,6 @@ body {
   width: 5rem;
 }
 .content .feature {
-  width: 21rem;
   background-color: #ffffff;
   height: auto;
   padding: 15px 10px;
@@ -164,42 +163,42 @@ body {
   margin-top: 3rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   position: relative;
+  width: 20rem;
 }
 .content .feature img {
-  width: inherit;
+  width: 20rem;
   max-height: max-content;
-  margin-left: -0.64rem;
-  margin-bottom: -1.4rem;
   border-radius: 0 0 0.5rem 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .content .feature p {
   font-size: 1rem;
   color: grey;
+  margin-bottom: 10rem;
 }
 .content .feature h3 {
   font-weight: 600;
   color: #2C475F;
 }
 
-.feature:nth-child(1) img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: inherit;
-}
-
 .get-started {
-  background: #2C475F;
+  background: #13242E;
   padding: 5rem 2rem;
   font-size: 1rem;
   margin: auto;
   text-align: center;
 }
 .get-started h5 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  color: #fff;
+  color: whitesmoke;
   font-family: "Montserrat", sans-serif;
+}
+.get-started p {
+  color: grey;
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=index.css.map */
