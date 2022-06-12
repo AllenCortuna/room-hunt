@@ -1,4 +1,4 @@
-import { TextField, Box, Button } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signin, signup } from "../../actions/auth";
@@ -54,7 +54,7 @@ const Login = () => {
         form.contact === "" ||
         form.image === ""
       ) {
-        alert("Complete All information. Image is required  😀");
+        alert("Complete All information. Image is require");
       } else if (form.password !== form.confirmPassword) {
         alert("Password did not match");
       } else {
@@ -65,7 +65,7 @@ const Login = () => {
     }
   };
 
-  return (
+  return <div className="login-container">
     <div className="login">
       <TextField required id="outlined-required" label="Email" />
       <TextField
@@ -89,11 +89,14 @@ const Login = () => {
       <Button variant="contained" onClick={handleSubmit}>
         SUBMIT
       </Button>
-      <Button variant="outlined" onClick={changeMode}>
+      <Button variant="outlined" onClick={setIsSignup}>
         {isSignup ? "Register" : "Login"}
       </Button>
-    </div>   
-  );
+
+      
+    </div>
+    </div>
+  
 };
 
 export default Login;

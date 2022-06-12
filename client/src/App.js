@@ -5,7 +5,7 @@ import "./css/index.css";
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import theme from './theme.js';
-import Login from './component/auth/Login';
+import Login from './component/login/Login';
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
