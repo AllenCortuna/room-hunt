@@ -179,8 +179,10 @@ body {
   margin-bottom: 10rem;
 }
 .content .feature h3 {
-  font-weight: 600;
+  font-weight: 500;
   color: #2C475F;
+  font-family: "Poppins", sans-serif;
+  margin: 0.5rem 0;
 }
 
 .get-started {
@@ -194,7 +196,7 @@ body {
   font-size: 1.1rem;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .get-started p {
   color: grey;
@@ -206,16 +208,18 @@ body {
   padding: 0.2rem 0.4rem;
   border: 2px solid #fff;
   color: whitesmoke;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.3rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .btn-white:hover {
-  background: #E54B2E;
-  color: whitesmoke;
+  background: #31DF8F;
+  color: #000;
   transition: 0.4s;
-  border: 2px solid #E54B2E;
+  border: 2px solid #31DF8F;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 /*# sourceMappingURL=index.css.map */
