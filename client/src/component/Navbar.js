@@ -11,9 +11,11 @@ const Navbar = () => {
 
   return (
     <span>
-      <div className="nav-btn" onClick={toggleBtn}>
-        <span></span>
-        <span></span>
+      <div className="nav-background">
+        <div className="nav-btn" onClick={toggleBtn}>
+          <span></span>
+          <span></span>
+        </div>
       </div>
 
       <div className="nav-menu">
@@ -24,17 +26,22 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav_item">
-            <Link to="/" className="nav-link">
+            <Link to="/login" className="nav-link">
               Login
             </Link>
           </li>
           <li className="nav_item">
-            <Link to="/" className="nav-link">
+            <Link to="/Register" className="nav-link">
               Register
             </Link>
           </li>
           <li className="nav_item">
-            <Link to="/" className="nav-link">
+            <Link to="/upload" className="nav-link">
+              Upload
+            </Link>
+          </li>
+          <li className="nav_item">
+            <Link to="/about" className="nav-link">
               About
             </Link>
           </li>

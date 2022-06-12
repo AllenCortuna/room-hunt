@@ -1,7 +1,7 @@
-import Grid from "@mui/material/Grid";
+// import Grid from "@mui/material/Grid";
+// import magnifying from "./img/magnifying.png";
+// import logoText from "./img/logoText.png";
 import background from "./img/hBackground.jpg";
-import magnifying from "./img/magnifying.png";
-import logoText from "./img/logoText.png";
 import window from "./img/window.png";
 import logoIcon from "./img/logoicon.png";
 import couch from "./img/couch.png"
