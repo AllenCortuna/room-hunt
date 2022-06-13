@@ -8,6 +8,7 @@ specifiers:
   '@testing-library/react': ^13.3.0
   '@testing-library/user-event': ^13.5.0
   axios: ^0.27.2
+  core: link:@material-ui/core
   jwt-decode: ^3.1.2
   moment: ^2.29.3
   npkill: ^0.8.3
@@ -30,6 +31,7 @@ dependencies:
   '@testing-library/react': 13.3.0_ef5jwxihqo6n7gxfmzogljlgcm
   '@testing-library/user-event': 13.5.0
   axios: 0.27.2
+  core: link:@material-ui/core
   jwt-decode: 3.1.2
   moment: 2.29.3
   npkill: 0.8.3
