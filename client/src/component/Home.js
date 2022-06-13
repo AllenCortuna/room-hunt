@@ -1,4 +1,4 @@
-// import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 // import magnifying from "./img/magnifying.png";
 // import logoText from "./img/logoText.png";
 import background from "./img/hBackground.jpg";
@@ -9,6 +9,7 @@ import furniture from "./img/furniture.png"
 // <img src={logo} alt="" />
 
 const Home = () => {
+
   return (
     <div className="home">
       <div className="header">
@@ -50,9 +51,8 @@ const Home = () => {
       <div className="get-started">
         <h5>See Available Rooms now!</h5>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nobis molestias eveniet. Placeat nulla voluptatum, cupiditate corporis veniam fuga minus ullam sequi dicta natus, mollitia totam repudiandae optio necessitatibus doloribus.</p>
-      <button className="btn-white">
-        GET STARTED
-      </button>
+<button class="button-30" role="button">Button 30</button>
+
       </div>
 
     </div>

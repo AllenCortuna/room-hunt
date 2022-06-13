@@ -49,11 +49,20 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isSignup) {
-      // TODO: Form validation //
-      // checkInfo()
-      dispatch(signup(form, history));
+      if (
+        form.hotelName === "" ||
+        form.location === "" ||
+        form.email === "" ||
+        form.contact === "" ||
+        form.image === ""
+      ) {
+        alert("Complete All information. Image is require");
+      } else if (form.password !== form.confirmPassword) {
+        alert("Password did not match");
+      } else {
+        dispatch(signup(form, history));
       }
-     else {
+    } else {
       dispatch(signin(form, history));
     }
   };
@@ -63,24 +72,24 @@ const Login = () => {
     <h3>Room Hunt</h3>
     {isSignup && (
       <>
-      <TextField required label="Hotel Name" variant="filled" nama="hotelName" onChange={handleChange}/>
-      <TextField required label="Location" name="location" onChange={handleChange}/>
-      <TextField required label="Phone Number" type="contact)" name="contact" onChange={handleChange}/>
+      <TextField required label="Hotel Name" variant="filled"/>
+      <TextField required label="Location" />
+      <TextField required label="Phone Number" type="number"/>
       </>
       )}
       <TextField required label="Email" type="email"/>
-      <TextField label="Password" type="password" autoComplete="current-password" name="password" onChange={handleChange}/>
+      <TextField
+        label="Password"
+        type="password"
+        autoComplete="current-password"
+      />
 
       {isSignup && (
-        <>
-      <TextField label="Comfirm Password" type="password" autoComplete="current-password" name="confirmPassword" onChange={handleChange}/>
-        <p>Select Hotel/Dorm Image</p>
         <FileBase
           type="file"
           multiple={false}
           onDone={({ base64 }) => setForm({ ...form, image: base64 })}
-      />
-        </>
+        />
       )}
 
       <Button variant="contained" onClick={handleSubmit}color="warning">
