@@ -58,7 +58,8 @@ const Login = () => {
     }
   };
 
-  return <div className="login">
+  return <div className="login-container">
+    <div className="login">
     <img src={logoIcon} alt=""/>
     <h3>Room Hunt</h3>
     {isSignup && (
@@ -82,16 +83,13 @@ const Login = () => {
       />
         </>
       )}
-
-      <Button variant="contained" onClick={handleSubmit}color="warning">
-        SUBMIT
-      </Button>
+<button className="button1">Submit</button>
       <Button variant="outlined" onClick={changeMode}>
         {isSignup ?"already have an account?Login":"dont have an account? Register"}
       </Button>
 
     </div>
-  
+    </div>
 };
 
 export default Login;
