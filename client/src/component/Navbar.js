@@ -11,12 +11,14 @@ const Navbar = () => {
 
   return (
     <span>
+      <div className="nav-background">
         <div className="nav-btn" onClick={toggleBtn}>
           <span></span>
           <span></span>
         </div>
+      </div>
 
-      <div className="nav-menu">
+       <div className="nav-menu">
         <ul className="nav-list">
           <li className="nav-item">
             <Link to="/" className="nav-link">
@@ -49,4 +51,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar
