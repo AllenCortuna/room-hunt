@@ -83,7 +83,7 @@ const Login = () => {
       />
         </>
       )}
-<button className="button1">Submit</button>
+<button className="button1">SUBMIT</button>
       <Button variant="outlined" onClick={changeMode}>
         {isSignup ?"already have an account?Login":"dont have an account? Register"}
       </Button>
