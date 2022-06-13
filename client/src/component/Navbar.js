@@ -11,12 +11,10 @@ const Navbar = () => {
 
   return (
     <span>
-      <div className="nav-background">
         <div className="nav-btn" onClick={toggleBtn}>
           <span></span>
           <span></span>
         </div>
-      </div>
 
       <div className="nav-menu">
         <ul className="nav-list">

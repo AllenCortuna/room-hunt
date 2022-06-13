@@ -1,15 +1,18 @@
-import { TextField, Button } from "@mui/material";
+import { TextField,Stack, Button } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signin, signup } from "../../actions/auth";
 import { useDispatch } from "react-redux";
 import FileBase from "react-file-base64";
+import logoIcon from '../img/logoicon.png';
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const history = useNavigate();
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
 
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("profile")));
+    setUser(JSON.parse(localStorage.getItem("profile")))
   }, [user]);
 
   const [form, setForm] = useState({
@@ -21,10 +24,6 @@ const Login = () => {
     contact: "",
     image: "",
   });
-  const [isSignup, setIsSignup] = useState(false);
-
-  const dispatch = useDispatch();
-  const history = useNavigate();
 
   const clear = () => {
     setForm({
@@ -37,12 +36,12 @@ const Login = () => {
       image: "",
     });
   };
-
+  // HANDLE SIGNUP
+  const [isSignup, setIsSignup] = useState(false);
   const changeMode = () => {
     setIsSignup((prevIsSignup) => !prevIsSignup);
     clear();
   };
-
   // HANDLE SUBMIT
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,36 +64,38 @@ const Login = () => {
     }
   };
 
-  return <div className="login-container">
-    <div className="login">
-      <TextField required id="outlined-required" label="Email" />
+  return <div className="login">
+    <img src={logoIcon} alt=""/>
+    <h3>Room Hunt</h3>
+    {isSignup && (
+      <>
+      <TextField required label="Hotel Name" />
+      <TextField required label="Location" />
+      <TextField required label="Phone Number" type="number"/>
+      </>
+      )}
+      <TextField required label="Email" type="email"/>
       <TextField
-        id="outlined-password-input"
         label="Password"
         type="password"
         autoComplete="current-password"
       />
 
       {isSignup && (
-        <div className="quick">
-          <FileBase
-            type="file"
-            multiple={false}
-            onDone={({ base64 }) => setForm({ ...form, image: base64 })}
-          />
-          <p> &nbsp;Location Image</p>
-        </div>
+        <FileBase
+          type="file"
+          multiple={false}
+          onDone={({ base64 }) => setForm({ ...form, image: base64 })}
+        />
       )}
 
       <Button variant="contained" onClick={handleSubmit}>
         SUBMIT
       </Button>
-      <Button variant="outlined" onClick={setIsSignup}>
-        {isSignup ? "Register" : "Login"}
+      <Button variant="outlined" onClick={changeMode}>
+        {isSignup ?"already have an account?Login":"dont have an account? Register"}
       </Button>
 
-      
-    </div>
     </div>
   
 };
