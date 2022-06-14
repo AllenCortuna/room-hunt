@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import logoIcon from './img/logoicon.png';
+
 const Navbar = () => {
   const toggleBtn = (e) => {
     var menu = document.querySelector(".nav-menu");
@@ -12,6 +14,7 @@ const Navbar = () => {
   return (
     <span>
       <div className="nav-background">
+        <img src={logoIcon} alt=""/>
         <div className="nav-btn" onClick={toggleBtn}>
           <span></span>
           <span></span>

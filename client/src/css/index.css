@@ -20,6 +20,9 @@ body {
   box-shadow: 0 2px 3px 1px black;
   z-index: 1;
 }
+.nav-background img {
+  width: 2rem;
+}
 
 .nav-btn {
   position: absolute;

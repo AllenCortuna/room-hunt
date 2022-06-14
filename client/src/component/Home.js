@@ -1,4 +1,4 @@
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 // import magnifying from "./img/magnifying.png";
 // import logoText from "./img/logoText.png";
 import background from "./img/hBackground.jpg";
@@ -51,7 +51,7 @@ const Home = () => {
       <div className="get-started">
         <h5>See Available Rooms now!</h5>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nobis molestias eveniet. Placeat nulla voluptatum, cupiditate corporis veniam fuga minus ullam sequi dicta natus, mollitia totam repudiandae optio necessitatibus doloribus.</p>
-<button class="button1" role="button">GET STARTED</button>
+<button class="button1">GET STARTED</button>
 
       </div>
 
