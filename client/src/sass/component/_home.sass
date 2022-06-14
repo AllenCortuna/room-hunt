@@ -3,14 +3,16 @@
 @use "../layout/layout"
 @use "../typograpy/typograpy"
 @use "../base/base"
+
 .header
   padding: 0
   margin-bottom: -1rem
   widows: 100vw
   height: 30vh
+  background-color: base.$dark
+  z-index: -2
 
   img
-    z-index: -2
     width: 100vw
     height: auto
   
@@ -18,6 +20,7 @@
   background: whitesmoke
   padding: 1em 1rem 5rem 1rem
   @include layout.container
+  @include layout.shadow
   position: relative
   margin: -1rem 0 -1rem 0
 

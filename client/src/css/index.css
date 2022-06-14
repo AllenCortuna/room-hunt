@@ -17,11 +17,16 @@ body {
 .nav-background {
   background: #13242E;
   height: 3rem;
-  box-shadow: 0 2px 3px 1px black;
-  z-index: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  z-index: 2;
 }
 .nav-background img {
-  width: 2rem;
+  width: 2.5rem;
+  margin: 0.2rem 0.5rem;
+}
+.nav-background h2 {
+  color: #fff;
+  font-family: "Poppins", serif;
 }
 
 .nav-btn {
@@ -133,9 +138,10 @@ body {
   margin-bottom: -1rem;
   widows: 100vw;
   height: 30vh;
+  background-color: #13242E;
+  z-index: -2;
 }
 .header img {
-  z-index: -2;
   width: 100vw;
   height: auto;
 }
@@ -148,6 +154,7 @@ body {
   justify-content: space-around;
   align-content: space-around;
   width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   position: relative;
   margin: -1rem 0 -1rem 0;
   border-radius: 1rem;
