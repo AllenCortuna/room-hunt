@@ -1,10 +1,10 @@
-import { TextField, Button, Container, Paper} from "@mui/material";
+import { TextField, Button, Paper,Box} from "@mui/material";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signin, signup } from "../../actions/auth";
 import { useDispatch } from "react-redux";
 import FileBase from "react-file-base64";
-// import logoIcon from "../img/logoicon.png";
+import logoIcon from "../img/logoicon.png";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -59,33 +59,39 @@ const Login = () => {
   };
 
   return (
-    <Container>
-      <Paper>
+    <div className="container">
+
+      <div className="paper">
+        <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: .8, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+      >
         {isSignup && (
           <>
             <TextField
-              required
               label="Hotel Name"
               variant="filled"
               nama="hotelName"
               onChange={handleChange}
             />
             <TextField
-              required
               label="Location"
               name="location"
               onChange={handleChange}
             />
             <TextField
-              required
               label="Phone Number"
-              type="contact)"
+              type="number"
               name="contact"
               onChange={handleChange}
             />
           </>
         )}
-        <TextField required label="Email" type="email" />
+        <TextField label="Email" type="email" />
         <TextField
           label="Password"
           type="password"
@@ -120,8 +126,9 @@ const Login = () => {
             ? "already have an account?Login"
             : "dont have an account? Register"}
         </Button>
-      </Paper>
-    </Container>
+      </Box>
+        </div>
+    </div>
   );
 };
 

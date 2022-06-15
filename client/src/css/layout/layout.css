@@ -1,3 +1,27 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 100%;
+  padding: 2rem 0 1rem 0;
+}
 
+.paper {
+  width: 21rem;
+  background-color: #ffffff;
+  height: auto;
+  padding: 15px 10px;
+  border-radius: 10px;
+  margin-top: 3rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  gap: 0.5rem;
+  margin: auto;
+  text-align: center;
+}
+
+.xs {
+  width: 1px;
+}
 
 /*# sourceMappingURL=layout.css.map */

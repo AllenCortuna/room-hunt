@@ -37,11 +37,19 @@ const theme = createTheme({
           fontWeight: 600,
           padding: "5px 15px",
           borderRadius: "8px",
-          textTransform: "none"
+          textTransform: "none",
+          fontSize: "1rem"
         },
       },
     },
+    MuiTextfield: {
+      defaultProps: {
+        shrink: true,
+        margin: "1rem"
+      }
+      }
+    },
   },
-});
+);
 
 export default theme;
