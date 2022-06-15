@@ -1,10 +1,10 @@
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Container, Paper} from "@mui/material";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signin, signup } from "../../actions/auth";
 import { useDispatch } from "react-redux";
 import FileBase from "react-file-base64";
-import logoIcon from "../img/logoicon.png";
+// import logoIcon from "../img/logoicon.png";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -59,10 +59,8 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login">
-        <img src={logoIcon} alt="" />
-        <h3>Room Hunt</h3>
+    <Container>
+      <Paper>
         {isSignup && (
           <>
             <TextField
@@ -114,16 +112,16 @@ const Login = () => {
           </>
         )}
 
-        <button className="button1" onClick={handleSubmit}>
-          SUBMIT
-        </button>
-        <Button variant="outlined" onClick={changeMode}>
+        <Button variant="contained" color="success" onClick={handleSubmit} >
+          Submit
+        </Button>
+        <Button variant="text" onClick={changeMode} fullWidth color="secondary">
           {isSignup
             ? "already have an account?Login"
             : "dont have an account? Register"}
         </Button>
-      </div>
-    </div>
+      </Paper>
+    </Container>
   );
 };
 

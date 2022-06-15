@@ -1,0 +1,47 @@
+
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) 
+  input[type='checkbox'],
+  input[type='radio'] 
+    -webkit-appearance: none
+    -moz-appearance: none
+  
+/* The toggle container */
+.switch 
+  width: 38px
+  border-radius: 11px
+
+
+/* The toggle knob */
+.switch::after 
+  left: 2px
+  top: 2px
+  border-radius: 50%
+  width: 15px
+  height: 15px
+  background: var(--ab, var(--border))
+  transform: translateX(var(--x, 0))
+
+
+/* Change color and position when checked */
+.switch:checked 
+  --ab: var(--active-inner)
+  --x: 17px
+
+
+/* Drop the opacity of the toggle knob when the input is disabled */
+.switch:disabled:not(:checked)::after 
+  opacity: .6
+
+/* Override defaults */
+input[type='checkbox']:checked,
+input[type='radio']:checked 
+  --b: var(--active)
+  --bc: var(--active)
+
+  
+/* Apply another border color on hover if not checked & not disabled */
+input[type='checkbox']:not(:checked):not(:disabled):hover,
+input[type='radio']:not(:checked):not(:disabled):hover 
+  --bc: var(--border-hover)
+

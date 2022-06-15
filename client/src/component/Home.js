@@ -1,7 +1,7 @@
-// import Button from "@mui/material/Button";
+import {Button} from "@mui/material";
 // import magnifying from "./img/magnifying.png";
 // import logoText from "./img/logoText.png";
-import background from "./img/hBackground.jpg";
+// import background from "./img/hBackground.jpg";
 import window from "./img/window.png";
 import logoIcon from "./img/logoicon.png";
 import couch from "./img/couch.png";
@@ -52,7 +52,7 @@ soluta pariatur sequi doloremque illo provident, exercitationem
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nobis molestias eveniet. Placeat nulla voluptatum, cupiditate corporis veniam fuga minus ullam sequi dicta natus, mollitia totam repudiandae optio necessitatibus doloribus.
         </p>
-        <button class="button1">GET STARTED</button>
+<Button variant="contained" color="secondary" size="sm"> Get Started</Button>
       </div>
     </div>
   );

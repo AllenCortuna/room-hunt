@@ -15,7 +15,6 @@ const Navbar = () => {
     <span>
       <div className="nav-background">
         <img src={logoIcon} alt=""/>
-        <h3>ROOM HUNT</h3>
         <div className="nav-btn" onClick={toggleBtn}>
           <span></span>
           <span></span>
