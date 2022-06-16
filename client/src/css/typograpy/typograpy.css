@@ -14,4 +14,11 @@ body {
   background: whitesmoke;
 }
 
+.title {
+  font-size: 1rem;
+  font-weight: 300;
+  color: grey;
+  font-family: "Poppins", sans-serif;
+}
+
 /*# sourceMappingURL=typograpy.css.map */

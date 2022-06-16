@@ -1,10 +1,10 @@
-import { TextField, Button, Paper,Box} from "@mui/material";
+import { TextField, Button,Box} from "@mui/material";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signin, signup } from "../../actions/auth";
 import { useDispatch } from "react-redux";
 import FileBase from "react-file-base64";
-import logoIcon from "../img/logoicon.png";
+import logoIcon from '../img/logoicon.png';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -61,11 +61,12 @@ const Login = () => {
   return (
     <div className="container">
 
-      <div className="paper">
+      <div className="paper mb4">
+        <img src={logoIcon} alt="" className="xs"/>
         <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: .8, width: '25ch' },
+      '& > :not(style)': { m: 0.5, width: '29ch' },
       }}
       noValidate
       autoComplete="off"
@@ -74,30 +75,37 @@ const Login = () => {
           <>
             <TextField
               label="Hotel Name"
-              variant="filled"
-              nama="hotelName"
+              name="hotelName"
               onChange={handleChange}
+              fullWidth
             />
             <TextField
               label="Location"
               name="location"
               onChange={handleChange}
+              fullWidth
             />
             <TextField
               label="Phone Number"
               type="number"
               name="contact"
               onChange={handleChange}
+              fullWidth
             />
           </>
         )}
-        <TextField label="Email" type="email" />
+          <TextField 
+          label="Email" 
+          type="email" 
+              fullWidth
+        />
         <TextField
           label="Password"
           type="password"
           autoComplete="current-password"
           name="password"
           onChange={handleChange}
+              fullWidth
         />
 
         {isSignup && (
@@ -108,12 +116,14 @@ const Login = () => {
               autoComplete="current-password"
               name="confirmPassword"
               onChange={handleChange}
-            />
-            <p>Select Hotel/Dorm Image</p>
+              fullWidth
+          />
+          <h3 className="secondary title">Upload Hotel Image</h3>
             <FileBase
               type="file"
               multiple={false}
-              onDone={({ base64 }) => setForm({ ...form, image: base64 })}
+            onDone={({ base64 }) => setForm({ ...form, image: base64 })}
+            label="Hotel Image"
             />
           </>
         )}
@@ -128,6 +138,7 @@ const Login = () => {
         </Button>
       </Box>
         </div>
+
     </div>
   );
 };

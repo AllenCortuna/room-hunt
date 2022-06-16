@@ -1,10 +1,11 @@
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Paper,Box} from "@mui/material";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signin, signup } from "../../actions/auth";
 import { useDispatch } from "react-redux";
 import FileBase from "react-file-base64";
-import logoIcon from '../img/logoicon.png';
+import logoIcon from "../img/logoicon.png";
+import Input from "./Input"
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const Login = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
 
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("profile")))
+    setUser(JSON.parse(localStorage.getItem("profile")));
   }, [user]);
 
   const [form, setForm] = useState({
@@ -43,64 +44,93 @@ const Login = () => {
     clear();
   };
   //CHANDLE CHANGE
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
   // HANDLE SUBMIT
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isSignup) {
-      if (
-        form.hotelName === "" ||
-        form.location === "" ||
-        form.email === "" ||
-        form.contact === "" ||
-        form.image === ""
-      ) {
-        alert("Complete All information. Image is require");
-      } else if (form.password !== form.confirmPassword) {
-        alert("Password did not match");
-      } else {
-        dispatch(signup(form, history));
-      }
+      // TODO: Form validation //
+      // checkInfo()
+      dispatch(signup(form, history));
     } else {
       dispatch(signin(form, history));
     }
   };
 
-  return <div className="login">
-    <img src={logoIcon} alt=""/>
-    <h3>Room Hunt</h3>
-    {isSignup && (
-      <>
-      <TextField required label="Hotel Name" variant="filled"/>
-      <TextField required label="Location" />
-      <TextField required label="Phone Number" type="number"/>
-      </>
-      )}
-      <TextField required label="Email" type="email"/>
-      <TextField
-        label="Password"
-        type="password"
-        autoComplete="current-password"
-      />
+  return (
+    <div className="container">
 
-      {isSignup && (
-        <FileBase
-          type="file"
-          multiple={false}
-          onDone={({ base64 }) => setForm({ ...form, image: base64 })}
+      <div className="paper">
+        <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: .8, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+      >
+        {isSignup && (
+          <>
+            <TextField
+              label="Hotel Name"
+              variant="filled"
+              nama="hotelName"
+              onChange={handleChange}
+            />
+            <TextField
+              label="Location"
+              name="location"
+              onChange={handleChange}
+            />
+            <TextField
+              label="Phone Number"
+              type="number"
+              name="contact"
+              onChange={handleChange}
+            />
+          </>
+        )}
+        <TextField label="Email" type="email" />
+        <TextField
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+          name="password"
+          onChange={handleChange}
         />
-      )}
 
-      <Button variant="contained" onClick={handleSubmit}color="warning">
-        SUBMIT
-      </Button>
-      <Button variant="outlined" onClick={changeMode}>
-        {isSignup ?"already have an account?Login":"dont have an account? Register"}
-      </Button>
+        {isSignup && (
+          <>
+            <TextField
+              label="Comfirm Password"
+              type="password"
+              autoComplete="current-password"
+              name="confirmPassword"
+              onChange={handleChange}
+            />
+            <p>Select Hotel/Dorm Image</p>
+            <FileBase
+              type="file"
+              multiple={false}
+              onDone={({ base64 }) => setForm({ ...form, image: base64 })}
+            />
+          </>
+        )}
 
+        <Button variant="contained" color="success" onClick={handleSubmit} >
+          Submit
+        </Button>
+        <Button variant="text" onClick={changeMode} fullWidth color="secondary">
+          {isSignup
+            ? "already have an account?Login"
+            : "dont have an account? Register"}
+        </Button>
+      </Box>
+        </div>
     </div>
-  
+  );
 };
 
 export default Login;

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logoIcon from './img/logoicon.png';
 
 const Navbar = () => {
   const toggleBtn = (e) => {
@@ -10,11 +9,10 @@ const Navbar = () => {
     btn.classList.toggle("is-active");
     e.preventDefaul();
   };
-
+  
   return (
     <span>
       <div className="nav-background">
-        <img src={logoIcon} alt=""/>
         <div className="nav-btn" onClick={toggleBtn}>
           <span></span>
           <span></span>
@@ -34,8 +32,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav_item">
-            <Link to="/Register" className="nav-link">
-              Register
+            <Link to="/feature" className="nav-link">
+              feature
             </Link>
           </li>
           <li className="nav_item">
