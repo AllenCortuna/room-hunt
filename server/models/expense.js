@@ -10,5 +10,5 @@ const expendSchema = mongoose.Schema({
   },
 });
 
-var ExpendPost = mongoose.model("ExpendPost", expendSchema);
-export default ExpendPost;
+var Expenses = mongoose.model("Expenses", expendSchema);
+export default Expenses;

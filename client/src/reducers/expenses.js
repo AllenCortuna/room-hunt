@@ -3,20 +3,20 @@
 
 import { FETCH_ALL,FETCH_OWN, CREATE, UPDATE, DELETE,} from '../constant';
 // eslint-disable-next-line
-export default (rooms = [], action) => {
+export default (expenses = [], action) => {
   switch (action.type) {
     case FETCH_ALL:
       return action.payload;
     case FETCH_OWN:
       return action.payload;
     case CREATE:
-      return [...rooms, action.payload];
+      return [...expenses, action.payload];
     case UPDATE:
-      return rooms.map((room) => (room._id === action.payload._id ? action.payload : room));
+      return expenses.map((expens) => (expens._id === action.payload._id ? action.payload : expens));
     case DELETE:
-      return rooms.filter((room) => room._id !== action.payload);
+      return expenses.filter((expens) => expens._id !== action.payload);
     default:
-      return rooms;
+      return expenses;
   }
 };
 

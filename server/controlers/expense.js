@@ -1,55 +1,55 @@
 import express from "express";
 import mongoose from "mongoose";
-import ExpendPost from "../models/postExpend.js";
+import Expenses from "../models/expense.js";
 
 const router = express.Router();
 
 
 
-export const getExpends = async (req, res) => {
+export const getExpenses = async (req, res) => {
   try {
-    const ExpendPost = await ExpendPost.find();
-    res.status(200).json(ExpendPost);
+    const Expenses = await Expenses.find();
+    res.status(200).json(Expenses);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
 };
 
 
-export const getOwnExpends = async (req, res) => {
+export const getOwnExpenses = async (req, res) => {
   const { myid } = req.params;
 
   try {
-    const ExpendPost = await ExpendPost.find({ creator: myid });
-    res.status(200).json(ExpendPost);
+    const Expenses = await Expenses.find({ creator: myid });
+    res.status(200).json(Expenses);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
 };
 
-export const getExpend = async (req, res) => {
+export const getExpense = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const expend = await ExpendPost.findById(id);
+    const expend = await Expenses.findById(id);
     res.status(200).json(expend);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
 };
 
-export const createExpend = async (req, res) => {
+export const createExpense = async (req, res) => {
   const expend = req.body;
 
-  const newExpendPost = new ExpendPost({
+  const newExpensePost = new Expenses({
     ...expend,
     // creator: req.userId,
     updatedAt: new Date().toISOString(),
   });
 
   try {
-    await newExpendPost.save();
-    res.status(201).json(newExpendPost);
+    await newExpensePost.save();
+    res.status(201).json(newExpensePost);
   } catch (error) {
     res.status(409).json({ message: error.message });
   }
@@ -57,14 +57,14 @@ export const createExpend = async (req, res) => {
 
 
 
-export const updateExpend = async (req, res) => {
+export const updateExpense = async (req, res) => {
   const { id } = req.params;
   const { name, price, details } = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(404).send(`No expend with id: ${id}`);
 
-  const updatedExpend = {
+  const updatedExpense = {
     name,
     price,
     details,
@@ -72,22 +72,22 @@ export const updateExpend = async (req, res) => {
     updatedAt: new Date().toISOString(),
   };
 
-  await ExpendPost.findByIdAndUpdate(id, updatedExpend, { new: true });
+  await Expenses.findByIdAndUpdate(id, updatedExpense, { new: true });
 
-  res.json(updatedExpend);
+  res.json(updatedExpense);
 };
 
 
 
-export const deleteExpend = async (req, res) => {
+export const deleteExpense = async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(404).send(`No expend with id: ${id}`);
 
-  await ExpendPost.findByIdAndRemove(id);
+  await Expenses.findByIdAndRemove(id);
 
-  res.json({ message: "Expend deleted successfully." });
+  res.json({ message: "Expense deleted successfully." });
 };
 
 export default router;
