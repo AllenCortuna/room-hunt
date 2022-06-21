@@ -14,6 +14,7 @@ export const expendStore = create(set => ({
     try {
       API.post('/rooms', newExpense);
     } catch (err) {
+      console.write("error create");
       set(() => ({ hasErrors: true, loading: false }));
     }
   },

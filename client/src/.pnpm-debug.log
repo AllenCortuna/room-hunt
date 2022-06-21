@@ -2,22 +2,356 @@
   "0 debug pnpm:scope": {
     "selected": 1
   },
-  "1 info pnpm": {
-    "err": {
-      "name": "Error",
-      "message": "not found: cache",
-      "code": "ENOENT",
-      "stack": "Error: not found: cache\n    at getNotFoundError (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:41759:51)\n    at Function.whichSync [as sync] (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:41836:13)\n    at getCommandAbsolutePathSync (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:43401:44)\n    at default_1 (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:43410:32)\n    at /data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:178873:39"
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "roomhunt",
+      "version": "0.1.0",
+      "private": true,
+      "homepage": ".",
+      "dependencies": {
+        "@emotion/react": "^11.9.0",
+        "@emotion/styled": "^11.8.1",
+        "@mui/material": "^5.8.2",
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^13.3.0",
+        "@testing-library/user-event": "^13.5.0",
+        "axios": "^0.27.2",
+        "core": "link:@material-ui/core",
+        "jwt-decode": "^3.1.2",
+        "moment": "^2.29.3",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "react-file-base64": "^1.0.3",
+        "react-router-dom": "^6.3.0",
+        "react-scripts": "5.0.1",
+        "surge": "^0.23.1",
+        "web-vitals": "^2.1.4",
+        "zustand": "4.0.0-rc.1"
+      },
+      "scripts": {
+        "start": "BROWSER=none react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+      },
+      "eslintConfig": {
+        "extends": [
+          "react-app",
+          "react-app/jest"
+        ]
+      },
+      "browserslist": {
+        "production": [
+          ">0.2%",
+          "not dead",
+          "not op_mini all"
+        ],
+        "development": [
+          "last 1 chrome version",
+          "last 1 firefox version",
+          "last 1 safari version"
+        ]
+      }
+    },
+    "prefix": "/data/data/com.termux/files/home/room-hunt/client"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": true,
+    "storeDir": "/data/data/com.termux/files/home/.local/share/pnpm/store/v3",
+    "virtualStoreDir": "/data/data/com.termux/files/home/room-hunt/client/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/data/data/com.termux/files/home/room-hunt/client",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@emotion/styled/11.8.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@emotion/styled",
+      "rawSpec": "^11.8.1"
     }
   },
-  "2 error pnpm": {
-    "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
-    "prefix": "/data/data/com.termux/files/home/room-hunt/client",
+  "5 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@mui/material/5.8.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@mui/material",
+      "rawSpec": "^5.8.2"
+    }
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@emotion/react/11.9.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@emotion/react",
+      "rawSpec": "^11.9.0"
+    }
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@testing-library/jest-dom/5.16.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@testing-library/jest-dom",
+      "rawSpec": "^5.16.4"
+    }
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@testing-library/react/13.3.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@testing-library/react",
+      "rawSpec": "^13.3.0"
+    }
+  },
+  "9 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@testing-library/user-event/13.5.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@testing-library/user-event",
+      "rawSpec": "^13.5.0"
+    }
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/jwt-decode/3.1.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "jwt-decode",
+      "rawSpec": "^3.1.2"
+    }
+  },
+  "11 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/axios/0.27.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "axios",
+      "rawSpec": "^0.27.2"
+    }
+  },
+  "12 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react/18.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react",
+      "rawSpec": "^18.1.0"
+    }
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/moment/2.29.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "moment",
+      "rawSpec": "^2.29.3"
+    }
+  },
+  "14 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-file-base64/1.0.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-file-base64",
+      "rawSpec": "^1.0.3"
+    }
+  },
+  "15 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-router-dom/6.3.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-router-dom",
+      "rawSpec": "^6.3.0"
+    }
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-scripts/5.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-scripts",
+      "rawSpec": "5.0.1"
+    }
+  },
+  "17 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/surge/0.23.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "surge",
+      "rawSpec": "^0.23.1"
+    }
+  },
+  "18 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-dom/18.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-dom",
+      "rawSpec": "^18.1.0"
+    }
+  },
+  "19 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/zustand/4.0.0-rc.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "zustand",
+      "rawSpec": "4.0.0-rc.1"
+    }
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/web-vitals/2.1.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "web-vitals",
+      "rawSpec": "^2.1.4"
+    }
+  },
+  "21 debug pnpm:_dependency_resolved": {
+    "resolution": "link:@material-ui/core",
+    "wanted": {
+      "dependentId": ".",
+      "name": "core",
+      "rawSpec": "link:@material-ui/core"
+    }
+  },
+  "22 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@emotion/styled/11.8.1",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "23 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@emotion/styled/11.8.1",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "24 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@emotion/react/11.9.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "25 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@emotion/react/11.9.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "26 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/jest-dom/5.16.4",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "27 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/jest-dom/5.16.4",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "28 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/user-event/13.5.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "29 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/user-event/13.5.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "30 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/react/13.3.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "31 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/react/13.3.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "32 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jwt-decode/3.1.2",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "33 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jwt-decode/3.1.2",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "34 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/axios/0.27.2",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "35 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/axios/0.27.2",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "36 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react/18.1.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "37 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react/18.1.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "38 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/redux/4.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "redux",
+      "rawSpec": "latest"
+    }
+  },
+  "39 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/redux/4.2.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "40 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/moment/2.29.3",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "41 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/moment/2.29.3",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "42 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-file-base64/1.0.3",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "43 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-file-base64/1.0.3",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "44 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-router-dom/6.3.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "found_in_store"
+  },
+  "45 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-router-dom/6.3.0",
+    "requester": "/data/data/com.termux/files/home/room-hunt/client",
+    "status": "resolved"
+  },
+  "46 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "readux-thunk is not in the npm registry, or you have no permission to fetch it.\n\nNo authorization header was set for the request.",
+    "request": {
+      "url": "https://registry.npmjs.org/readux-thunk"
+    },
+    "response": {
+      "size": 0
+    },
+    "pkgName": "readux-thunk",
+    "spec": {
+      "fetchSpec": "latest",
+      "name": "readux-thunk",
+      "type": "tag"
+    },
+    "pkgsStack": [],
     "err": {
       "name": "pnpm",
-      "message": "not found: cache",
-      "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
-      "stack": "Error: not found: cache\n    at getNotFoundError (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:41759:51)\n    at Function.whichSync [as sync] (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:41836:13)\n    at getCommandAbsolutePathSync (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:43401:44)\n    at default_1 (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:43410:32)\n    at /data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:178873:39"
+      "message": "GET https://registry.npmjs.org/readux-thunk: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "pnpm: GET https://registry.npmjs.org/readux-thunk: Not Found - 404\n    at RetryOperation._fn (/data/data/com.termux/files/home/.local/share/pnpm/global/5/.pnpm/pnpm@7.3.0/node_modules/pnpm/dist/pnpm.cjs:85463:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
     }
   }
 }

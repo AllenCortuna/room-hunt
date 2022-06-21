@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
 const expendSchema = mongoose.Schema({
-  id: String, 
-  creator: String,
   name: String,
   price: Number,
   details: String,

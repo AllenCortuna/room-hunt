@@ -43,7 +43,7 @@ export const createExpend = async (req, res) => {
 
   const newExpendPost = new ExpendPost({
     ...expend,
-    creator: req.userId,
+    // creator: req.userId,
     updatedAt: new Date().toISOString(),
   });
 

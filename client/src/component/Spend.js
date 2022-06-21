@@ -10,7 +10,8 @@ const Spend = () => {
   useEffect(() =>{
     getExpenses();
   },[expenses,getExpenses])
-
+    
+  console.log(expenses);
   return(
     <div className="spend">
       <h2>Daily expenses</h2>
