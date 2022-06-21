@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { createExpense } from "../actions/expenses";
+// import { useDispatch } from "react-redux";
+// import { createExpense } from "../actions/expenses";
 const Form = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [form, setForm] = useState({
     name: "",
@@ -15,7 +15,7 @@ const Form = () => {
   };
 
   const handleSubmit = () => {
-    dispatch(createExpense(form));
+    // dispatch(createExpense(form));
     alert('ok submit');
     // clear();
   };

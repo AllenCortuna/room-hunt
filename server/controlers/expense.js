@@ -10,6 +10,7 @@ export const getExpenses = async (req, res) => {
   try {
     const Expenses = await Expenses.find();
     res.status(200).json(Expenses);
+    console.log("getExpenses ok");
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
@@ -31,25 +32,27 @@ export const getExpense = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const expend = await Expenses.findById(id);
-    res.status(200).json(expend);
+    const expense = await Expenses.findById(id);
+    res.status(200).json(expense);
   } catch (error) {
     res.status(404).json({ message: error.message });
+
   }
 };
 
 export const createExpense = async (req, res) => {
-  const expend = req.body;
+  const expense = req.body;
 
   const newExpensePost = new Expenses({
-    ...expend,
-    // creator: req.userId,
+    ...expense,
+    creator: req.userId,
     updatedAt: new Date().toISOString(),
   });
 
   try {
     await newExpensePost.save();
     res.status(201).json(newExpensePost);
+    console.log("create ok");
   } catch (error) {
     res.status(409).json({ message: error.message });
   }
@@ -62,7 +65,7 @@ export const updateExpense = async (req, res) => {
   const { name, price, details } = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(id))
-    return res.status(404).send(`No expend with id: ${id}`);
+    return res.status(404).send(`No expense with id: ${id}`);
 
   const updatedExpense = {
     name,
@@ -83,7 +86,7 @@ export const deleteExpense = async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id))
-    return res.status(404).send(`No expend with id: ${id}`);
+    return res.status(404).send(`No expense with id: ${id}`);
 
   await Expenses.findByIdAndRemove(id);
 

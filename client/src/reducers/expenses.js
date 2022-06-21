@@ -12,9 +12,9 @@ export default (expenses = [], action) => {
     case CREATE:
       return [...expenses, action.payload];
     case UPDATE:
-      return expenses.map((expens) => (expens._id === action.payload._id ? action.payload : expens));
+      return expenses.map((expense) => (expense._id === action.payload._id ? action.payload : expense));
     case DELETE:
-      return expenses.filter((expens) => expens._id !== action.payload);
+      return expenses.filter((expense) => expense._id !== action.payload);
     default:
       return expenses;
   }
