@@ -10,11 +10,11 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-export const fetchRooms = () => API.get('/rooms');
-export const createRoom = (newRoom) => API.post('/rooms', newRoom);
-export const fetchOwnRooms = () => API.get('/rooms');
-export const updateRoom = (id, updatedRoom) => API.patch(`/rooms/${id}`, updatedRoom);
-export const deleteRoom = (id) => API.delete(`/rooms/${id}`);
+export const fetchExpenses = () => API.get('/rooms');
+export const createExpense = (newExpense) => API.post('/rooms', newExpense);
+export const fetchOwnExpenses = () => API.get('/rooms');
+export const updateExpense = (id, updatedExpense) => API.patch(`/rooms/${id}`, updatedExpense);
+export const deleteExpense = (id) => API.delete(`/rooms/${id}`);
 
 
 export const fetchUsers = () => API.get('/user');

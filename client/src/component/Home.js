@@ -1,5 +1,6 @@
 
 import Spend from "./Spend";
+import Form from "./Form";
 // import Add from "./Add";
 
 
@@ -10,6 +11,7 @@ const Home = () => {
   return (
     <div className="home">
       <Spend/>
+      <Form/>
     </div>
     
   )
