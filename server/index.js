@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import roomRoutes from './routes/rooms.js';
+import expenseRoutes from './routes/expense.js';
 import userRoutes from './routes/user.js';
 const app = express();
 dotenv.config();
@@ -13,9 +13,9 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 app.use('/user',userRoutes)
-app.use('/rooms', roomRoutes);
+app.use('/expense', expenseRoutes);
 
-app.get('/',(req,res) => {res.send('Hello to Room hunt API');});
+app.get('/',(req,res) => {res.send('WebApp React');});
 
 const PORT = process.env.PORT|| 5000;
 

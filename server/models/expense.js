@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const roomSchema = mongoose.Schema({
+const expenseSchema = mongoose.Schema({
     hotelName: String,
     name: String,
     price: String,
@@ -18,5 +18,5 @@ const roomSchema = mongoose.Schema({
 
 });
 
-var RoomPost = mongoose.model('RoomPost', roomSchema);
-export default RoomPost;
+var Expense = mongoose.model('Expense', expenseSchema);
+export default Expense;
