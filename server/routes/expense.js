@@ -1,15 +1,15 @@
 import express from 'express';
-import { getRooms,getRoom,getOwnRooms,createRoom,updateRoom,deleteRoom} from '../controlers/rooms.js';
+import { getExpenses,getExpense,getOwnExpenses,createExpense,updateExpense,deleteExpense} from '../controlers/expense.js';
 
 const router = express.Router();
 import auth from '../middleware/auth.js'
 
 
-router.get('/', getRooms);
-router.get('/',auth, getOwnRooms);
-router.post('/',auth, createRoom);
-router.get('/:id',auth, getRoom);
-router.patch('/:id',auth, updateRoom);
-router.delete('/:id',auth, deleteRoom);
+router.get('/', getExpenses);
+router.get('/',auth, getOwnExpenses);
+router.post('/',auth, createExpense);
+router.get('/:id',auth, getExpense);
+router.patch('/:id',auth, updateExpense);
+router.delete('/:id',auth, deleteExpense);
  
 export default router;
