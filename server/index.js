@@ -15,9 +15,9 @@ app.use(cors());
 app.use('/user',userRoutes)
 app.use('/expense', expenseRoutes);
 
-app.get('/',(req,res) => {res.send('WebApp React');});
+app.get('/',(req,res) => {res.send('Hello to Room hunt API');});
 
-const PORT = process.env.PORT|| 5000;
+const PORT = process.env.PORT|| 8000;
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
