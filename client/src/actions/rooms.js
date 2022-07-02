@@ -24,6 +24,7 @@ export const createRoom = (room) => async (dispatch) => {
   try {
     const { data } = await api.createRoom(room);
     dispatch({ type: CREATE, payload: data });
+     
   } catch (error) {
     console.log(error.message );
   }
