@@ -20,8 +20,8 @@ const Home = () => {
       {expense?.map((expen) => (
         <div className="expense" id={expen._id}>
           <hr />
-          <h4>{expen.name}</h4>
-          <p>{expen.price}</p>
+          <h4 className="">{expen.name}</h4>
+          <p >{expen.price}</p>
           <p>{expen.detail}</p>
           <button
             onClick={() => {

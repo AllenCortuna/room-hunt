@@ -1,42 +1,38 @@
-import create from 'zustand';
-import axios from 'axios';
+import create from "zustand";
+import axios from "axios";
 
-const api = axios.create({ baseURL: 'https://webrecord.herokuapp.com'})
-export const expenseStore = create(set=>({
+const api = axios.create({ baseURL: "https://webrecord.herokuapp.com" });
+export const expenseStore = create((set) => ({
   expense: [],
   loading: false,
   error: false,
 
-  getExpenses: async () =>{
+  getExpenses: async () => {
     try {
-      const response = await api.get('/expense');
-      set({expense: response.data});
+      const response = await api.get("/expense");
+      set({ expense: response.data });
       console.log("get ok");
     } catch (err) {
       console.log(err.message);
     }
-  },expense
-// NOTE: fix //   
-  createExpense: async (data) =>{
+  },
+
+  createExpense: async (data) => {
     try {
-      const newExpense = data
-      const response = await api.post('/expense',newExpense);
-      set({expense: response.data});
+      const response = await api.post("/expense", data);
     } catch (err) {
       console.log(err.message);
     }
   },
-  
-  deleteExpense: async (id)=>{
+
+  deleteExpense: async ({ id, state }) => {
     try {
-      const response = await api.delete(`/expense/${id}`)
-       
-      set({expense: response})
+      await api.delete(`/expense/${id}`);
+      set((state) => ({
+        expense: state.expense.filter((a) => a._id !== id),
+      }));
     } catch (err) {
       console.log(err.message);
     }
-  }
-  
-}))
- 
- 
+  },
+}));
