@@ -17,9 +17,10 @@ export const expenseStore = create((set) => ({
     }
   },
 
-  createExpense: async (data) => {
+  createExpense: async ({data,state}) => {
     try {
-      const response = await api.post("/expense", data);
+      await api.post("/expense", data);
+      set(state => ({expense: [...state.expense, data]}));
     } catch (err) {
       console.log(err.message);
     }

@@ -1,46 +1,27 @@
 import { Link } from "react-router-dom";
+
 const Navbar = () => {
-  const toggleBtn = (e) => {
-    var menu = document.querySelector(".nav-menu");
-    var btn = document.querySelector(".nav-btn");
-
-    menu.classList.toggle("is-active");
-    btn.classList.toggle("is-active");
-    e.preventDefaul();
-  };
-
+  const navbar = [
+    {name: "Home",
+      link: "/",
+    },
+    {name: "Expense",
+      link: "/Expense",
+    },
+    {name: "Profit",
+      link: "/Profit",
+    },
+    {name: "Login",
+      link: "/Login",
+    },
+  ]
   return (
-    <span>
-      <div className="nav-btn" onClick={toggleBtn}>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div className="nav-menu">
-        <ul className="nav-list">
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li className="nav_item">
-            <Link to="/" className="nav-link">
-              Dashboard
-            </Link>
-          </li>
-          <li className="nav_item">
-            <Link to="/" className="nav-link">
-              Expenses
-            </Link>
-          </li>
-          <li className="nav_item">
-            <Link to="/" className="nav-link">
-              Login
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </span>
+    <nav className="flex flex-row bg-gray-200 p-2 m-0 shadow-lg">
+    {navbar.map((nav)=>(
+      <Link className="uppercase text-teal-700 font-bold mr-3 hover:text-white hover:bg-teal-900 hover:rounded-sm" to={nav.link}>{nav.name}</Link>
+    ))}
+      
+</nav>
   );
 };
 
