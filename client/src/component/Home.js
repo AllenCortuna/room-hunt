@@ -11,31 +11,33 @@ const Home = () => {
   useEffect(() => {
     getExpenses();
   }, [getExpenses]);
-    // eslint-disable-next-line
-  
+  // eslint-disable-next-line
+
   return (
     <div className="min-h-screen px-2 grid bg-grey ">
       <h2>Daily Cost</h2>
       <br />
       {expense?.map((expen) => (
-        <div className="p-4 mt-2 bg-white rounded-lg shadow-lg" id={expen._id}>
-          <h4 className="">{expen.name}</h4>
-          <p >{expen.price}</p>
-          <p>{expen.detail}</p>
+        <div
+          className="p-4 mt-2 bg-white rounded-md shadow-md h-24 grid grid-rows-3"
+          id={expen._id}
+        >
+          <div>
+            <h4 className="">{expen.name}</h4>
+            <p>{expen.price}</p>
+            <p className="">{expen.detail}</p>
+          </div>
           <button
+            className="justify-self-end border-red-500 text-red-500 font-medium leading-3 border px-3 py-2 rounded-md "
             onClick={() => {
               deleteExpense(expen._id);
             }}
-        className=""
           >
             delete
           </button>
         </div>
       ))}
-    <br />
-    <button className="px-2 bg-violet-500">
-  Save changes
-</button>
+      <br />
       <button onClick={getExpenses}>refresh</button>
       <br />
       <Form />

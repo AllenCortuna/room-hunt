@@ -18,14 +18,13 @@ const Form = () => {
     createExpense(form);
     getExpenses();
   };
+  const name= [
+  ]
 
   return (
-    <div className="font">
-      <input type="text" name="name" onChange={handleChange} />
-      <input type="number" name="price" onChange={handleChange} />
-      <input type="text" name="detail" onChange={handleChange} />
-      <br />
-      <button onClick={handleSubmit}>Submit</button>
+    <div className="p-4 grid">
+      <button onClick={handleSubmit} className="px-4 py-2 rounded-lg bg-purple-900 font-bold drop-shadow-lg text-white justify-self-end">Submit</button>
+
     </div>
   );
 };
