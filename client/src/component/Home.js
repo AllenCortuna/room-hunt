@@ -13,7 +13,7 @@ const Home = () => {
   }, [getExpenses]);
   // eslint-disable-next-line
 
-      /* <h2>Daily Cost</h2> */
+  /* <h2>Daily Cost</h2> */
   return (
     <div className=" px-3 flex bg-secondary flex-wrap flex-row">
       <br />
@@ -24,14 +24,13 @@ const Home = () => {
         >
           <div>
             <h4 className="font-semibold text-sm text-black">{expen.name}</h4>
+
             <p className="text-sm text-green">{expen.price}</p>
             <p className="">{expen.detail}</p>
           </div>
         </div>
       ))}
-
-
-
+      <Form />
     </div>
   );
 };

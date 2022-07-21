@@ -1,182 +1,178 @@
-
-
-
-bg-color-{100-900} 
+BACKGROUND
+bg-*-{100-900} {}
 black, white, gray, red, orange,
 yellow, green, teal, indigo, blue,
 purple, pink
 
+// Fonts
+.font-sans {} // Helvetica or similar
+.font-serif {} // Times New Roman or similar
+.font-mono {} // Monospace or similar
+// Sizing
+.text-xs {} // .75rem;
+.text-sm {} // .875rem;
+.text-base {} // 1rem;
+.text-lg {} // 1.125rem;
+.text-xl {} // 1.25rem;
+.text-2xl {} // 1.5rem;
+.text-3xl {} // 1.875rem;
+.text-4xl {} // 2.25rem;
+.text-5xl {} // 3rem;
+.text-6xl {} // 4rem;
+// Text Align
+.text-left {}
+.text-center {}
+.text-right {}
+.text-justify {}
+// Text Color
+.text-{color}-{shade (100-900)} {}
 
-.font-sans  
-.font-serif  
-.font-mono  
-
-
-
-.text-xs 
-.text-sm 
-.text-base 
-.text-lg 
-.text-xl 
-.text-2xl 
-.text-3xl 
-.text-4xl 
-.text-5xl 
-.text-6xl 
-
-.text-left 
-.text-center 
-.text-right 
-.text-justify 
-
-.text-{color}-{shade (100-900)}
-
-
-.italic 
-.not-italic 
-
-.font-hairline 
-.font-thin
-.font-light 
-.font-normal 
-.font-medium 
-.font-semibold 
-.font-bold 
-.font-extrabold 
-.font-black 
-
-.tracking-tighter 
-.tracking-tight 
-.tracking-normal 
-.tracking-wide 
-.tracking-wider 
-.tracking-widest 
-
-.leading-none 
-.leading-tight 
-.leading-snug 
-.leading-normal 
-.leading-relaxed 
-.leading-loose 
-
-.underline 
-.line-through
-.no-underline 
-
-.uppercase 
-.lowercase 
-.capitalize 
-.normal-case 
+// Styling
+.italic {}
+.not-italic {}
+// Font Weight (Bold)
+.font-hairline {} // 100
+.font-thin {} // 200
+.font-light {} // 300
+.font-normal {} // 400
+.font-medium {} // 500
+.font-semibold {} // 600
+.font-bold {} // 700
+.font-extrabold {} // 800
+.font-black {} // 900
+// Letter Spacing
+.tracking-tighter {} // -0.05em
+.tracking-tight {} // -0.025em
+.tracking-normal {} // 0
+.tracking-wide {} // 0.025em
+.tracking-wider {} // 0.05em
+.tracking-widest {} // 0.1em
+// Line Height/Spacing
+.leading-none {} // 1
+.leading-tight {} // 1.25
+.leading-snug {} // 1.375
+.leading-normal {} // 1.5
+.leading-relaxed {} // 1.625
+.leading-loose {} // 2
+// Text Decorations
+.underline {}
+.line-through {}
+.no-underline {}
+// Text Transform
+.uppercase {}
+.lowercase {}
+.capitalize {}
+.normal-case {}
 
 
 
-.border 
-.border-0 
-.border-2 
-.border-4 
-.border-8 
-
+.border {} // 1px
+.border-0 {} // 0
+.border-2 {} // 2px
+.border-4 {} // 4px
+.border-8 {} // 8px
+// Modifiers
 .border-{t, b, l, f}-*
-
+// Colors
 .border-{color}-{shade (100-900)}
+// Border Style
+.border-solid {}
+.border-dashed {}
+.border-dotted {}
+.border-double {}
+.border-none {}
+// Border Radius
+.rounded-none {} // 0
+.rounded-sm {} // .125rem
+.rounded {} // .25rem
+.rounded-lg {} // .5rem
+.rounded-full {} // 9999px
 
-.border-solid 
-.border-dashed 
-.border-dotted 
-.border-double 
-.border-none 
+block {} // block
+.inline-block {} // inline-block
+.inline {} // inline
+.flex {} // flex
+.inline-flex {} // inline-flex
+.table {} // table
+.table-row {} // table-row
+.table-cell {} // table-cell
+.hidden {} // none
 
-.rounded-none  
-.rounded-sm  
-.rounded  
-.rounded-lg  
-.rounded-full  
-
-block  
-.inline-block  
-.inline  
-.flex  
-.inline-flex  
-.table  
-.table-row   
-.table-cell   
-.hidden   
-
-flex 
-
-.justify-start 
-.justify-center 
-.justify-end 
-.justify-between 
-.justify-around 
-
-.items-stretch 
-.items-start 
-.items-center 
-.items-end 
-.items-baseline 
-
-.flex-row 
-.flex-row-reverse 
-.flex-col 
-.flex-col-reverse 
-
-.flex-no-wrap 
-.flex-wrap 
-.flex-wrap-reverse 
-
-
+flex {}
+// Default direction - horizontal alignment
+.justify-start {}
+.justify-center {}
+.justify-end {}
+.justify-between {}
+.justify-around {}
+// Default direction - vertical alignment
+.items-stretch {}
+.items-start {}
+.items-center {}
+.items-end {}
+.items-baseline {}
+// Flex Direction
+.flex-row {}
+.flex-row-reverse {}
+.flex-col {}
+.flex-col-reverse {}
+// Wrapping
+.flex-no-wrap {}
+.flex-wrap {}
+.flex-wrap-reverse {}
 
 
-.sm: 
-.md: 
-.lg: 
-.xl: 
+// Default breakpoints
+[all] // 0px
+.sm: // 640px
+.md: // 768px
+.lg: // 1024px
+.xl: // 1280px
+// Default responsive classes
+.sm:bg-* {} // background color
+.sm:w-* {} // width
+.sm:h-* {} // height
+.sm:p-* {} // padding
+.sm:m-* {} // margin
+.sm:font-sans {} // font family - sans, serif, mono
+.sm:text-lg {} // font size - xs, sm, base, lg, xl, {2-6}xl
+.sm:text-left {} // left, center, right, justify
+.sm:text-{color}-{shade (100-900)} {} // text color
+.sm:font-bold {} // font weight
+.sm:tracking-tighter {} // letter spacing
+.sm:leading-tight {} // line spacing/height
+.sm:uppercase {} // text transform
+.sm:border-{color}-{shade (100-900)} // border color
+.sm:border-{style} {} // border style
+.sm:border-{width} {} // border width
+.sm:rounded-{size} {} // border radius
+.sm:{display} {} // block, inline, flex, table, hidden...
+.sm:flex {} // display flex
+.sm:flex-{col|row} {} // flex direction
 
-.sm:bg-*  
-.sm:w-*  
-.sm:h-*  
-.sm:p-*  
-.sm:m-*  
-.sm:font-sans  
-.sm:text-lg  
-.sm:text-left  
-.sm:text-{color}-{shade (100-900)}  
-.sm:font-bold  
-.sm:tracking-tighter 
-.sm:leading-tight  
-.sm:uppercase   
-.sm:border-{color}-{shade (100-900)} 
-.sm:border-{style}  
-.sm:border-{width}  
-.sm:rounded-{size} 
-.sm:{display}  
-.sm:flex   
-.sm:flex-{col|row}  
+// Default responsive classes
+.hover:bg-* {} // background color
+.hover:text-{color}-{shade (100-900)} {} // text color
+.hover:font-bold {} // font weight
+.hover:border-{color}-{shade (100-900)} // border color
 
+// Default responsive classes
+.focus:bg-* {} // background color
+.focus:text-{color}-{shade (100-900)} {} // text color
+.focus:font-bold {} // font weight
+.focus:border-{color}-{shade (100-900)} // border color
 
-.hover:bg-* 
-.hover:text-{color}-{shade (100-900)} 
-.hover:font-bold   font weight
-.hover:border-{color}-{shade (100-900)} 
-
-
-.focus:bg-*  
-.focus:text-{color}-{shade (100-900)}  
-.focus:font-bold   font weight
-.focus:border-{color}-{shade (100-900)} 
-
-
-.shadow-{size} 
- 
-.opacity-{percent} 
-
-.cursor-{style} 
-
-.focus:outline-none 
-
-
-.select-{style} 
-
-.sr-only  
-.no-sr-only  
+// Box Shadows - responsive, hover, focus states
+.shadow-{size} {} // md, lg, xl, 2xl, inner, outline, none
+// Opacity - responsive, hover, focus states
+.opacity-{percent} // 100, 75, 50, 25, 0
+// Cursors - responsive
+.cursor-{style} // default, pointer, wait, text, move, not-allowed
+// Outline - focus
+.focus:outline-none // remove default browser outline styling
+# use focus:shadow-outline instead for a nicer alternative
+// User Select - responsive
+.select-{style} // none, text, all, auto
+// Screen Readers - responsive, hover, focus, active
+.sr-only {} // visually hidden, present for screen readers
+.no-sr-only {} // undo .sr-only

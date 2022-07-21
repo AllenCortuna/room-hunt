@@ -21,20 +21,19 @@ const Form = () => {
   const name = ["name", "price", "detail"];
 
   return (
-    <div className="p-3 w-min grid bg-black rounded-lg mt-4">
-        <span className="">
-      {name.map((n) => (
+    <div className="justify-self-center align-self-center m-1 p-2 w-min grid bg-white rounded-lg mt-4">
+      <span className="">
+        {name.map((n) => (
           <input
-            placeholder = {n}
-            name = {n}
-            value = {form.n}
-            onChange = {handleChange}
-            className= " mt-2 border-grey border p-2 rounded-md shadow-md"
-          >
-          </input>          
-      ))}
-        </span>
-
+            autocomplete="off"
+            placeholder={n}
+            name={n}
+            value={form.n}
+            onChange={handleChange}
+            className=" w-64 mt-2 border-grey border p-2 rounded-md shadow-inner focus:border-2 focus:outline-none  "
+          ></input>
+        ))}
+      </span>
 
       <button
         onClick={handleSubmit}

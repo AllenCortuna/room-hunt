@@ -1,27 +1,38 @@
 import { Link } from "react-router-dom";
-
+import { HomeIcon, ClipboardCheckIcon, UserCircleIcon, ChartSquareBarIcon } from '@heroicons/react/solid'
 const Navbar = () => {
-  const navbar = [
-    {name: "Home",
-      link: "/",
-    },
-    {name: "Expense",
-      link: "/Expense",
-    },
-    {name: "Profit",
-      link: "/Profit",
-    },
-    {name: "Login",
-      link: "/Login",
-    },
-  ]
+  const iconProperties = "text-secondary h-6 drop-shadow-md "
+  const navbar = [{
+    name: "Home",
+    icon: <HomeIcon className={iconProperties} />,
+    link: "/",
+  },
+    { name: "Record",
+      icon: <ClipboardCheckIcon className={iconProperties} />,
+      link: "/record"},
+    {
+      name: "Chart",
+      icon: <ChartSquareBarIcon className={iconProperties} />,
+      link: "/chart"},
+    { 
+      name: "login",
+      icon: <UserCircleIcon className={iconProperties} />,
+      link: "/login"}
+
+  ];
   return (
-    <nav className="flex flex-row bg-gray-200 p-2 m-0 shadow-lg">
-    {navbar.map((nav)=>(
-      <Link className="uppercase text-teal-700 font-bold mr-3 hover:text-white hover:bg-teal-900 hover:rounded-sm" to={nav.link}>{nav.name}</Link>
-    ))}
-      
-</nav>
+    <nav className="flex flex-row bg-black h-10 top-0 w-full justify-around items-center drop-shadow-3xl p-2 ">
+
+      {navbar.map((nav) => (
+        <div className="nav-link flex group">
+          <Link to={nav.link}>
+            {nav.name}
+          </Link>
+        </div>
+      ))}
+
+
+    </nav>
   );
 };
 
