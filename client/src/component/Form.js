@@ -18,13 +18,30 @@ const Form = () => {
     createExpense(form);
     getExpenses();
   };
-  const name= [
-  ]
+  const name = ["name", "price", "detail"];
 
   return (
-    <div className="p-4 grid">
-      <button onClick={handleSubmit} className="px-4 py-2 rounded-lg bg-purple-900 font-bold drop-shadow-lg text-white justify-self-end">Submit</button>
+    <div className="p-3 w-min grid bg-black rounded-lg mt-4">
+        <span className="">
+      {name.map((n) => (
+          <input
+            placeholder = {n}
+            name = {n}
+            value = {form.n}
+            onChange = {handleChange}
+            className= " mt-2 border-grey border p-2 rounded-md shadow-md"
+          >
+          </input>          
+      ))}
+        </span>
 
+
+      <button
+        onClick={handleSubmit}
+        className="mt-3 px-4 py-2 rounded-lg bg-teal-400 font-semibold shadow-md text-white h-max self-end"
+      >
+        Submit
+      </button>
     </div>
   );
 };

@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,10 +11,13 @@
 }
 
 body {
-  font-size: 1rem;
-  background-color: whitesmoke;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  color: #000000
+  font-family: "Poppins", sans-serif;
 }
 
+@layer components {
+  .nav-link {
+    @apply bg-opacity-50 duration-300 ease-linear rounded-xl bg-white p-2 uppercase text-black font-bold mr-3 hover:bg-green hover:rounded-3xl hover:p-2 hover:shadow-2xl transition-all  hover:p-3  ;
+
+  }
+  
+}

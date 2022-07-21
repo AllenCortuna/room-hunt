@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@emotion/react': ^11.9.0
   '@emotion/styled': ^11.8.1
+  '@heroicons/react': ^1.0.6
   '@testing-library/jest-dom': ^5.16.4
   '@testing-library/react': ^13.3.0
   '@testing-library/user-event': ^13.5.0
@@ -23,6 +24,7 @@ specifiers:
 dependencies:
   '@emotion/react': 11.9.3_react@18.2.0
   '@emotion/styled': 11.9.3_jhgplt4fmhans76oq3ok5iox2u
+  '@heroicons/react': 1.0.6_react@18.2.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/user-event': 13.5.0
@@ -1697,6 +1699,14 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@heroicons/react/1.0.6_react@18.2.0:
+    resolution: {integrity: sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.9.5:
