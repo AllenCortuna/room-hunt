@@ -21,7 +21,7 @@ const Form = () => {
   const name = ["name", "price", "detail"];
 
   return (
-    <div className="justify-self-center align-self-center m-1 p-2 w-min grid bg-white rounded-lg mt-4">
+    <div className="center align-self-center m-1 p-3 w-min grid bg-white rounded-lg mt-4 shadow border border-grey-200">
       <span className="">
         {name.map((n) => (
           <input
@@ -30,14 +30,14 @@ const Form = () => {
             name={n}
             value={form.n}
             onChange={handleChange}
-            className=" w-64 mt-2 border-grey border p-2 rounded-md shadow-inner focus:border-2 focus:outline-none  "
+            className=" w-64 mt-2 border-grey border p-2 rounded-md shadow-inner focus:border-2 focus:outline-none text-sm"
           ></input>
         ))}
       </span>
 
       <button
         onClick={handleSubmit}
-        className="mt-3 px-4 py-2 rounded-lg bg-teal-400 font-semibold shadow-md text-white h-max self-end"
+        className="mt-3 px-4 py-2 rounded-3xl bg-green font-medium shadow-md text-white h-max self-end text-sm "
       >
         Submit
       </button>
