@@ -1,7 +1,8 @@
 import create from "zustand";
 import axios from "axios";
 
-const api = axios.create({ baseURL: "https://webrecord.herokuapp.com" });
+// const api = axios.create({ baseURL: "https://webrecord.herokuapp.com" });
+const api = axios.create({ baseURL: "http://localhost:8000" });
 export const expenseStore = create((set) => ({
   expense: [],
   loading: false,

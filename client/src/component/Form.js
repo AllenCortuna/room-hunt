@@ -14,7 +14,7 @@ const Form = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = () => {
-    console.log("submit ok");
+    console.log("submit ok : ", form.name, form.price, form.detail);
     createExpense(form);
     getExpenses();
   };
@@ -30,14 +30,14 @@ const Form = () => {
             name={n}
             value={form.n}
             onChange={handleChange}
-            className="font-regular m-auto w-64 mt-2 border-grey-400 border p-2 rounded-sm focus:border-2 focus:outline-none text-sm"
+            className="font-regular m-auto w-64 mt-2 border-grey-400 border p-2 rounded focus:border-2 focus:outline-none text-sm"
           ></input>
         ))}
       </span>
 
       <button
         onClick={handleSubmit}
-        className="justify-self-end w-min px-4 py-2  rounded-md font-medium shadow-md text-white h-max self-end text-sm bg-green "
+        className="justify-self-end w-min-max px-4 py-2  rounded font-medium text-white h-max self-end text-sm bg-green "
       >
         Submit
       </button>

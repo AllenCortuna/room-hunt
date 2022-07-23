@@ -16,9 +16,16 @@ body {
 }
 
 @layer components {
-  .nav-link {
-    @apply text-sm text-white duration-300 ease-linear rounded-lg border-white  p-1 uppercase font-semibold mr-3 hover:bg-green hover:rounded-3xl hover:px-3 hover:py-1 hover:shadow-2xl transition-all hover:text-black;
 
+  .nav-link {
+    @apply text-sm text-white duration-300 ease-linear rounded-lg border-white  p-1 uppercase font-medium mr-3 hover:bg-green hover:rounded-3xl hover:px-3 hover:py-1 hover:shadow-2xl transition-all hover:text-black hover:font-bold;
   }
-  
+
+  .btn-mode {
+    @apply text-sm text-gray-400 underline mt-5;
+  }
+
+  .btn-submit {
+    @apply text-sm text-white bg-green rounded-md p-2 w-full mt-4  ;
+  }
 }

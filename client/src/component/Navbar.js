@@ -21,7 +21,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="flex flex-row bg-black h-10 top-0 w-full justify-around items-center p-2 ">
+    <nav className="flex flex-row bg-black h-10 top-0 w-full justify-around items-center p-2 shadow-md ">
       {navbar.map((nav) => (
         <div className="nav-link flex group">
           <Link to={nav.link}>{nav.name}</Link>
