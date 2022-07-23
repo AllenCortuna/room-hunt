@@ -14,14 +14,13 @@ else
   set shortmess=aoO
 endif
 badd +24 component/Form.js
-badd +22 component/Home.js
-badd +7 App.js
-badd +10 index.css
+badd +9 component/Home.js
+badd +5 component/Navbar.js
 argglobal
 %argdel
-edit index.css
+edit component/Navbar.js
 argglobal
-balt component/Form.js
+balt component/Home.js
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -32,12 +31,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 15) / 30)
+let s:l = 5 - ((4 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
-normal! 013|
+keepjumps 5
+normal! 02|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
