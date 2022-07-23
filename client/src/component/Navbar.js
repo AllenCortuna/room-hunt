@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
-  const iconProperties = "text-secondary h-6 drop-shadow-md ";
   const navbar = [
     {
       name: "Home",

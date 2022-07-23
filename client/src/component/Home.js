@@ -6,6 +6,7 @@ const Home = () => {
   const getExpenses = expenseStore((state) => state.getExpenses);
 
   const expense = expenseStore((state) => state.expense);
+// eslint-disable-next-line
   const deleteExpense = expenseStore((state) => state.deleteExpense);
 
   useEffect(() => {
