@@ -15,18 +15,18 @@ const Home = () => {
 
   /* <h2>Daily Cost</h2> */
   return (
-    <div className=" px-3 flex bg-secondary flex-wrap flex-row">
+    <div className=" px-3 flex flex-wrap flex-row">
       <br />
       {expense?.map((expen) => (
         <div
-          className="w-screen p-4 mt-2 rounded-md bg-white h-20 flex flex-row flex-wrap shadow-sm border-2 border-gray-100"
+          className="w-screen p-4 mt-3 rounded-md bg-white h-min flex flex-row flex-wrap shadow border border-gray-200"
           id={expen._id}
         >
           <div>
-            <h4 className="font-semibold text-sm text-black">{expen.name}</h4>
-
-            <p className="text-sm text-green">{expen.price}</p>
-            <p className="">{expen.detail}</p>
+            <h4 className="font-medium text-sm text-gray-600  ">{expen.name}</h4>
+        
+            <p className="text-xs text-gray-500">Php {expen.price}</p>
+            <p className="truncate text-gray-400 text-xs">{expen.detail}</p>
           </div>
         </div>
       ))}
