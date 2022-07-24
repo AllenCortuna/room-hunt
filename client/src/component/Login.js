@@ -19,6 +19,10 @@ const Login = () => {
     setMode(!mode);
   };
 
+  const handleSubmit = (form) => {
+    // login(form)
+  }
+
   return (
     <div className="flex flex-wrap justify-center align-center pt-10">
       <div className="text-center m-3 p-4 bg-white h-auto w-auto rounded-md shadow ">
@@ -52,7 +56,7 @@ const Login = () => {
           ></input>
         )}
     {/* index css className*/}
-        <button className="btn-submit">{mode ? "Login" : "Signup"}</button>
+        <button className="btn-submit" onClick={handleSubmit}>{mode ? "Login" : "Signup"}</button>
         <button className="btn-mode" onClick={handleMode}>
           {mode
             ? "Dont have an Account? Signup"
